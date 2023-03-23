@@ -1,3 +1,6 @@
+## Trimmomatic
+trimmomatic PE -threads 4 /home/lacen/brenno/Ref-Seq/BM770-13_R1.fastq /home/lacen/brenno/Ref-Seq/BM770-13_R2.fastq /home/lacen/brenno/Ref-Seq/BM770-13-R1-trimado.fastq /home/lacen/brenno/Ref-Seq/BM770-13-R1.descarte.fastq /home/lacen/brenno/Ref-Seq/BM770-13-R2-trimado.fastq /home/lacen/brenno/Ref-Seq/BM770-13-R2.descarte.fastq SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15
+
 
 
 
