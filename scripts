@@ -1,8 +1,21 @@
 ## Trimmomatic
-trimmomatic PE -threads 4 /home/lacen/brenno/Ref-Seq/BM770-13_R1.fastq /home/lacen/brenno/Ref-Seq/BM770-13_R2.fastq /home/lacen/brenno/Ref-Seq/BM770-13-R1-trimado.fastq /home/lacen/brenno/Ref-Seq/BM770-13-R1.descarte.fastq /home/lacen/brenno/Ref-Seq/BM770-13-R2-trimado.fastq /home/lacen/brenno/Ref-Seq/BM770-13-R2.descarte.fastq SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15
+trimmomatic PE -threads 4 \
+/home/lacen/brenno/Ref-Seq/BM770-13_R1.fastq \
+/home/lacen/brenno/Ref-Seq/BM770-13_R2.fastq \
+/home/lacen/brenno/Ref-Seq/BM770-13-R1-trimado.fastq \
+/home/lacen/brenno/Ref-Seq/BM770-13-R1.descarte.fastq \
+/home/lacen/brenno/Ref-Seq/BM770-13-R2-trimado.fastq \
+/home/lacen/brenno/Ref-Seq/BM770-13-R2.descarte.fastq \
+SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15
 
 ## Segundo comando - gerar BAM
-STAR --runMode alignReads --genomeDir '/home/lacen/brenno/Ref-Seq/Ref' --outSAMtype BAM SortedByCoordinate --readFilesIn '/home/lacen/brenno/Ref-Seq/BM770-13_R1.fastq' '/home/lacen/brenno/Ref-Seq/BM770-13_R2.fastq' --runThreadN 12
+STAR --runMode alignReads --genomeDir '/home/lacen/brenno/Ref-Seq/Ref' \
+--outSAMtype BAM SortedByCoordinate \
+--readFilesIn '/home/lacen/brenno/Ref-Seq/BM770-13_R1.fastq' '/home/lacen/brenno/Ref-Seq/BM770-13_R2.fastq' \
+--runThreadN 12
+
+## Caso o STAR tenha gerado SAM, converta para BAM antes de rodar o Arriba
+samtools view -S -b Aligned.out.sam > Aligned.out.bam
 
 
 ## Script Arriba 
