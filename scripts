@@ -23,5 +23,8 @@ samtools view -S -b Aligned.out.sam > Aligned.out.bam
 /home/lacen/brenno/Ref-Seq/Ref \
 /home/lacen/brenno/Ref-Seq/GRCh38_latest_genomic.gff \
 /home/lacen/brenno/Ref-Seq/GRCh38_latest_genomic.fa \
-/home/lacen/brenno/arriba_v2.4.0/database/blacklist_hg38_GRCh38_v2.4.0.tsv.gz /home/lacen/brenno/arriba_v2.4.0/database/known_fusions_hg38_GRCh38_v2.4.0.tsv.gz /home/lacen/brenno/arriba_v2.4.0/database/protein_domains_hg38_GRCh38_v2.4.0.gff3 8 /home/lacen/brenno/teste_STAR/Aligned.sortedByCoord.out.bam
+/home/lacen/brenno/arriba_v2.4.0/database/blacklist_hg38_GRCh38_v2.4.0.tsv.gz \
+/home/lacen/brenno/arriba_v2.4.0/database/known_fusions_hg38_GRCh38_v2.4.0.tsv.gz \
+/home/lacen/brenno/arriba_v2.4.0/database/protein_domains_hg38_GRCh38_v2.4.0.gff3 8 \
+/home/lacen/brenno/teste_STAR/Aligned.sortedByCoord.out.bam
 
