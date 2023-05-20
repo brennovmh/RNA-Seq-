@@ -14,6 +14,9 @@ STAR --runMode alignReads --genomeDir '/home/lacen/brenno/Ref-Seq/Ref' \
 --readFilesIn '/home/lacen/brenno/Ref-Seq/BM770-13_R1.fastq' '/home/lacen/brenno/Ref-Seq/BM770-13_R2.fastq' \
 --runThreadN 12
 
+## Gerar arquivo bam indexado (bai)
+samtools index *.bam
+
 ## Caso o STAR tenha gerado SAM, converta para BAM antes de rodar o Arriba
 samtools view -S -b Aligned.out.sam > Aligned.out.bam
 
